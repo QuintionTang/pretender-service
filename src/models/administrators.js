@@ -1,7 +1,9 @@
 "use strict";
 const _ = require("lodash");
+
 class Admin {
-    constructor() {
+    constructor(dbHelper) {
+        this.dbkey = "administrators";
         this._roles = [
             {
                 id: 1,
