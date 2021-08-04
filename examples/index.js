@@ -31,11 +31,16 @@ for (const item of administrators) {
     const uid = item.id;
     const keyName = `${keyPrefix}_${uid}`;
     item.id = uid;
-    dbHelper.put(keyName, item, (error) => {
-        if (error !== null) {
-            administratorsKeys.push(keyName);
-        }
-    });
+    dbHelper
+        .put("", item)
+        .then((error) => {
+            if (error !== null) {
+                administratorsKeys.push(keyName);
+            }
+        })
+        .catch((error) => {
+            console.log(error);
+        });
 }
 console.info("====>开始查找数据");
 // 开始查找uid为 ckoyhjqbj0000mzkd1o63e31p 的用户信息

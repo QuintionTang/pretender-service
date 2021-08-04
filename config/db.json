@@ -1,0 +1,27 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "devpoint",
+    "database": "crayon-admin",
+    "host": "127.0.0.1",
+    "dialect": "postgres",
+    "options": {
+      "operatorsAliases": false,
+      "logging": true
+    }
+  },
+  "test": {
+    "username": "postgres",
+    "password": "devpoint",
+    "database": "crayon-admin",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "devpoint",
+    "database": "crayon-admin",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

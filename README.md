@@ -1,6 +1,6 @@
 # pretender-service
 
-一个简单的后台 MOCK 服务，基于 RESTFul 标准设计
+一个 NODEJS + PostgreSQL 的后台服务，基于 RESTFul 标准设计
 
 ### 开始
 
@@ -10,7 +10,23 @@
 npm install
 ```
 
-2. 运行
+2. 安装 PostgreSQL
+
+https://www.postgresql.org/download/
+
+3. 初始化数据表
+
+```
+sequelize db:migrate
+```
+
+4. 初始化数据
+
+```
+sequelize db:seed:all
+```
+
+5. 运行
 
 ```
 node app.js
