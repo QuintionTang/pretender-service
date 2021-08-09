@@ -16,7 +16,7 @@ module.exports = {
             [
                 {
                     id: 1,
-                    username: "administrators",
+                    username: "administrator",
                     password: "devpoint",
                     email: "QuintionTang@gmail.com",
                     add_time: 1627828617,
