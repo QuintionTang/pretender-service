@@ -8,14 +8,13 @@ module.exports = {
                 primaryKey: true,
                 type: Sequelize.INTEGER,
             },
-            id: {
-                type: Sequelize.INTEGER,
-            },
             add_time: {
                 type: Sequelize.INTEGER,
+                defaultValue: 0,
             },
             last_login: {
                 type: Sequelize.INTEGER,
+                defaultValue: 0,
             },
             username: {
                 type: Sequelize.STRING,

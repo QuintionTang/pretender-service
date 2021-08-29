@@ -13,10 +13,10 @@ class Util {
         this.code = 0;
     }
 
-    setError(statusCode, errorCode, message) {
+    setError(statusCode, errors, errorCode) {
         this.statusCode = statusCode;
-        this.message = message;
-        this.code = errorCode;
+        this.message = errors;
+        this.code = errorCode || statusCode;
     }
 
     send(res) {

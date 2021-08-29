@@ -5,7 +5,22 @@ const path = require("path");
 const Sequelize = require("sequelize");
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || "development";
-const config = require(__dirname + "/../../config/db.json")[env];
+const dbConfig = require(__dirname + "/../../config/db.json")[env];
+
+const config = Object.assign(
+    {
+        dialect: "postgres",
+        logging: false,
+        pool: {
+            max: 50,
+            min: 0,
+            acquire: 30000,
+            idle: 10000,
+        },
+    },
+    dbConfig
+);
+
 const db = {};
 
 let sequelize;
@@ -19,6 +34,21 @@ if (config.use_env_variable) {
         config
     );
 }
+/**
+ * 数据库连接验证
+ */
+const authenticate = () => {
+    sequelize
+        .authenticate()
+        .then((res) => {
+            console.log("===========数据库连接成功===========");
+        })
+        .catch((error) => {
+            console.log("===========数据库连接失败===========");
+            console.error(error);
+        });
+};
+authenticate();
 
 fs.readdirSync(__dirname)
     .filter((file) => {

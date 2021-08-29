@@ -12,15 +12,15 @@
   },
   "test": {
     "username": "postgres",
-    "password": "devpoint",
-    "database": "crayon-admin",
+    "password": "ddy2665",
+    "database": "devpoint",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
     "username": "postgres",
-    "password": "devpoint",
-    "database": "crayon-admin",
+    "password": "ddy2665",
+    "database": "devpoint",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }

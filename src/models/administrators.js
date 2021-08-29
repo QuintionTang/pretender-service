@@ -7,10 +7,17 @@ module.exports = (sequelize, DataTypes) => {
             id: {
                 type: DataTypes.INTEGER,
                 primaryKey: true,
+                allowNull: false,
+                unique: true,
+                autoIncrement: true,
             },
-            add_time: DataTypes.INTEGER,
+            add_time: {
+                type: DataTypes.INTEGER,
+                defaultValue: 0,
+            },
             last_login: DataTypes.INTEGER,
             username: DataTypes.STRING,
+            password: DataTypes.STRING,
             email: DataTypes.STRING,
             login_ip: DataTypes.STRING,
         },
