@@ -1,0 +1,11 @@
+{
+    "script": "./app.js",
+    "ext": "js json",
+    "ignore": [
+        "node_modules/",
+        "README.md"
+    ],
+    "legacyWatch": true,
+    "delay": 200,
+    "verbose": true
+}
