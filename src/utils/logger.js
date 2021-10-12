@@ -4,6 +4,7 @@
  * @param {*} sectionName 日志模块名称
  */
 "use strict";
+const { globalLogger } = require("./winstonLogger");
 const logger = (verbosity = 2, sectionName = "devpoint") => {
     const util = require("util");
     const chalk = require("chalk");
@@ -32,7 +33,9 @@ const logger = (verbosity = 2, sectionName = "devpoint") => {
             sign: "=i=",
             signColor: chalk.blue,
             messageColor: chalk.bold,
-            formatter: (sign, message) => [sign, message],
+            formatter: (sign, message) => {
+                return [sign, message];
+            },
         },
         {
             name: "stats",
@@ -70,7 +73,10 @@ const logger = (verbosity = 2, sectionName = "devpoint") => {
             sign: "=✘=",
             signColor: chalk.red,
             messageColor: chalk.bold.red,
-            formatter: (sign, message) => [sign, message],
+            formatter: (sign, message) => {
+                globalLogger.error(message);
+                return [sign, message];
+            },
         },
         {
             name: "time",

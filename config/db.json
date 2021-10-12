@@ -12,14 +12,14 @@
   },
   "test": {
     "username": "postgres",
-    "password": "ddy2665",
+    "password": "devpoint",
     "database": "devpoint",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
     "username": "postgres",
-    "password": "ddy2665",
+    "password": "devpoint",
     "database": "devpoint",
     "host": "127.0.0.1",
     "dialect": "postgres"
